@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>help e.V.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container bg-soft shadow rounded mt-2">    
+            <div class="row d-flex justify-content-center text-center">
+                <a href="/index.html" class="d-flex justify-content-center mt-3"><img src="img/logo.png" height="60" alt="Logo"></a>
+                <h2 class="mt-3 mb-3 ">Deine Spende wurde registriert!</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <table class="table-borderless border rounded d-flex justify-content-center mt-5 mb-3 col-12 col-md-6">  
+                    <tbody>
+                      <tr>
+                        <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg></td>
+                        <td class="text-start p-1" id="nameOutput"></td>
+                      </tr>
+                      <tr>
+                        <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                          <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+                          <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                        </svg></td>
+                        <td class="text-start p-1" id="emailOutput"></td>
+                      </tr>
+                      <tr>
+                        <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                        </svg></td>
+                        <td class="text-start p-1" id="datum"></td>
+                      </tr>
+                      <tr>
+                        <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg></td>
+                        <td class="text-start p-1" id="methode"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="text-start" id="strasseOutput"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="text-start">Berlin</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="text-start" id="plzOutput"></td>
+                      </tr>
+                    <tr><td class="p-1"> </td></tr>
+                    <tr>
+                      <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                        <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z"/>
+                        <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z"/>
+                      </svg></td>
+                      <td class="text-start" id="kleidung"></td>
+                    </tr>
+                    <tr>
+                      <td class="text-start p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe-central-south-asia" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.882 1.731a.482.482 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.721.721 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a.996.996 0 0 0-.462-.04 7.03 7.03 0 0 1 2.45-2.027Zm-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.78.78 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.454.454 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282a.61.61 0 0 0 .04-.001 7.003 7.003 0 0 1-12.658.905Z"/>
+                      </svg></td>
+                      <td class="text-start" id="region"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <small id="note" class="mb-3">  
+                </small>            
+            </div>
+        </div>
+      <script>
+        // Retrieve data from URL query parameters
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        
+        const today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; // month is zero-based
+        let yyyy = today.getFullYear();
+        let hr = today.getHours();
+        let min = today.getMinutes();
+        if (dd < 10) dd = '0' + dd;
+        if (mm < 10) mm = '0' + mm;
+        if (hr < 10) hr = '0' + hr;
+        if (min < 10) min = '0' + min;
+        const formatted = dd + '.' + mm + '.' + yyyy + ' ' + hr + ":" + min;
+
+        const kleider = ['','Frauenkleidung','Kinderkleidung','Männerkleidung','verschiedene Kleidung']
+        const region = ['','Afghanistan','Südsudan', 'Türkei', 'Ukraine']
+
+        const note = "Das Sammelfahrzeug wird die Spenden am kommenden Dienstag zwischen 9:00 und 11:00 Uhr abholen. Packen Sie sie gut ein und beschriften Sie sie mit einem Anhänger: 'Hilfe e.V.''. Legen Sie sie am Vortag vor Ihre Eingangstür."
+        
+        // Display the data on the page
+        document.getElementById("nameOutput").textContent += params.vornamename || "N/A";
+        document.getElementById("emailOutput").textContent += params.email || "N/A";
+        document.getElementById("datum").textContent += formatted;
+        document.getElementById("methode").textContent += params.flexRadioDefault.toUpperCase() || "N/A";
+        document.getElementById("strasseOutput").textContent += params.strasse || "Sonnenallee 54";
+        document.getElementById("plzOutput").textContent += params.PLZ || "12045";
+        document.getElementById("kleidung").textContent += kleider[params.kleidung] || "N/A";
+        document.getElementById("region").textContent += region[params.region] || "N/A";
+        document.getElementById("note").textContent += (params.PLZ) ? note : "";
+    </script>
+    </body>
+</html>

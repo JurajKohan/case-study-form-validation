@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+  <title>help e.V.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Kleiderspende">
+
+  <meta name="keywords" content="Kleiderspende">
+  <meta name="description" content="Wir spenden Kleider.">
+
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="bg-soft">
+    <nav class="navbar navbar-expand-md py-lg-3 px-lg-6 navbar-light">
+      <div class="container-fluid">
+        <!-- 100% at all break points -->
+
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="60" alt="Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">STARTSEITE</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">VEREIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">AKTUELLES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TERMINE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">KONTAKT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pb-7 pb-lg-11 bg-soft" id="call-out">
+      <div class="container">
+        <!-- Containers are the most basic layout element 
+      in Bootstrap and are required when using our default grid system.      
+      .container, which sets a max-width at each responsive breakpoint -->
+        <!-- The hierarchy of Bootstrap’s grid goes from container to row to 
+      column to your content.  -->
+        <div class="row justify-content-between align-items-center">
+          <!-- Rows are wrappers for columns. Each column has horizontal padding (called a gutter) 
+        for controlling the space between them.  -->
+          <!-- Use justify-content utilities on flexbox containers to change the alignment of flex 
+          items on the main axis (the x-axis to start -->
+          <!-- Use align-items utilities on flexbox containers to change the alignment of flex items 
+        on the cross axis (the y-axis to start -->
+          <div class="col-12 col-md-6 order-2 order-lg-1 mb-3 mb-lg-6 mb-md-6">
+            <img src="img/Zeichenfläche.svg" alt="Grafik einer Menschengruppe">
+          </div>
+          <!-- Use .order- classes for controlling the visual order of your content. These classes are 
+          responsive, so you can set the order by breakpoint (e.g., .order-1.order-md-2). -->
+          <div class="col-12 col-md-5 order-1 order-lg-2">
+            <h1 class="display-4 mb-3 text-center">Menschen helfen, Kleider spenden!</h1>
+            <!-- display is for heading size, mb is margin bottom -->
+            <!-- this makes the paragraph stands out -->
+            <!-- margin top -->
+            <form action="#" method='post' class="d-flex flex-column mb-5 mb-lg-0" id="form1" novalidate>
+              <!-- Apply display utilities to create a flexbox container and transform direct children elements into flex items. 
+            Flex containers and items are able to be modified further with additional flex properties. 
+            Die Hauptidee hinter dem Flexbox-Layout besteht darin, einem Element die Möglichkeit zu geben, die 
+            Breite und Höhe seiner Kindelemente dynamisch anzupassen, um den verfügbaren Platz optimal auszufüllen.
+            Das Flexbox-Layout ermöglicht schon eine sehr flexible Anordnung von Elementen. 
+            Für komplexe Layouts bietet sich aber das neuere Grid-Layout an -->
+              <div class="name mb-3"><input class="form-control" type="text" name="vornamename" placeholder="Vorname | Name" id="vornamename" required></div>
+              <div class="email mb-3"><input class="form-control" type="email" name="email" placeholder="Email" id="email" required></div>
+              <div class="region mb-3">
+                <select class="form-select" aria-label="Krisenregion auswählen" name="region" id="region" required>
+                  <option selected disabled value="">Krisenregion auswählen</option>
+                  <option value="1">Afghanistan</option>
+                  <option value="2">Südsudan</option>
+                  <option value="3">Türkei</option>
+                  <option value="4">Ukraine</option>
+                </select>
+              </div>
+              
+              <div class="kleidung mb-3">
+                <select class="form-select" aria-label="Art der Kleidung" name="kleidung" id="kleidung" required>
+                  <option selected disabled value="">Art der Kleidung </option>
+                  <option value="1">Frauen</option>
+                  <option value="2">Kinder</option>
+                  <option value="3">Männer</option>
+                  <option value="4">Verschiedenes</option>
+                </select>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="abgabe" value="Abgabe" checked>
+                <label class="form-check-label" for="abgabe">Abgabe im Vereinsbüro</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="abholung" value="Abholung">
+                <label class="form-check-label" for="abholung">Abholung in der Nähe des Vereinsbüros</label>
+              </div>
+
+              <div class="mb-3" id="adresse">
+              <p class="form-check-label mb-2 mt-2">Adresse:</p>  
+                <div class="mb-2"><input type="text" class="form-control" name="strasse" id="strasse" placeholder="Straße | Nr."></div>
+                <div class="mb-2"><input type="text" class="form-control" id="stadt" placeholder="Berlin" disabled></div>
+                <div class="mb-2"><input type="text" class="form-control" name="PLZ" id="PLZ" placeholder="PLZ"></div>
+              </div>
+
+              <button class="btn btn-primary mt-2" type="submit">Spende registrieren</button>
+
+              <div class="form-group form-check m-3">
+                <input type="checkbox" class="form-check-input" id="datenspeicherung" required>
+                <label class="form-check-label form-check-sign-white" for="datenspeicherung">Ich stimme der
+                  Datenspeicherung zu</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-lg bg-soft mt-5" id="introduction">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 mb-md-7">
+          <div class="col-12 col-md-8 mt-5 text-center">
+            <h2 class="h1 font-weight-bolder mb-4">Gemeinsam Krisen bewältigen</h2>
+            <p class="lead">Unser Ziel ist es, bedürftigen Menschen in Krisenzeiten sofortige Unterstützung zukommen zu
+              lassen. Wir sind sowohl auf lokaler als auch auf globaler Ebene tätig und laden jeden ein, sich uns
+              anzuschließen. Lernen Sie unsere Arbeit kennen:</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="card shadow-soft border-light">
+
+              <div class="card-header p-0">
+                <img src="img/Flooding.jpg" class="card-img-top rounded-top" alt="Bild einer Überflutung">
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title mt-3">Lorem ipsum</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore.</p>
+                <ul class="list-group d-flex justify-content-center mb-4">
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Nulla malesuada pellentesque</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Tempor id eu nisl nunc mi</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Ut pharetra sit amet aliquam </div>
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-primary">Mehr erfahren</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="card shadow-soft border-light">
+
+              <div class="card-header p-0">
+                <img src="img/Earthquake.jpg" class="card-img-top rounded-top" alt="image">
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title mt-3">Non enim praesent</h3>
+                <p class="card-text">Sem et tortor consequat id. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.</p>
+                <ul class="list-group d-flex justify-content-center mb-4">
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Vulputate enim nulla aliquet</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Vulputate sapien</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Nisl vel pretium</div>
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-primary">Mehr erfahren</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="card shadow-soft border-light">
+
+              <div class="card-header p-0">
+                <img src="img/Donate.jpg" class="card-img-top rounded-top" alt="image">
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title mt-3">Impact Locus</h3>
+                <p class="card-text">Moz Localis negotia tua per telam informationem distribuit pro visibilitate inquisitionis maximae.</p>
+                <ul class="list-group d-flex justify-content-center mb-4">
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Imperdiet nulla malesuada</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Turpis cursus in</div>
+                  </li>
+                  <li class="list-group-item d-flex pl-0 pb-1">
+                    <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
+                    <div>Pulvinar mattis nunc</div>
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-lg mb-5 mt-5" id="testimonies">
+      <div class="container">
+        <div class="row justify-content-center mb-5 mb-lg-7">
+          <div class="col-12 col-md-8 text-center">
+            <h1 class="h1 font-weight-bolder mb-4">Lesen Sie nur einige der Aussagen unserer Spendenempfänger</h1>
+            
+          </div>
+        </div>
+
+        <div class="row mb-lg-5">
+          <div class="col-12 col-lg-6">
+            <div class="customer-testimonial d-flex mb-5">
+              <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                <p class="mt-2">"Mein Mann und ich möchten Ihnen von ganzem Herzen für Ihre Freundlichkeit und Großzügigkeit danken. 
+                  Die finanzielle Unterstützung, die Sie uns gewährt haben, hat uns in dieser schwierigen Zeit geholfen, unsere finanzielle Last zu erleichtern. 
+                  Danke und Gott segne Sie."</p>
+                <span class="h6">- Aysun Can<small class="ml-0 ml-md-2">  ( Türkei )</small></span>
+              </div>
+            </div>
+            <div class="customer-testimonial d-flex mb-5">
+              <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                <p class="mt-2">"Alles ist gut, sie geben uns zu Essen, sie bringen uns Geschenke, wir haben alles.
+                  Aber ich kann es nicht erwarten nach Hause zu gehen.""</p>
+                <span class="h6">- Valentina <small class="ml-0 ml-md-2">( Ukraine )</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 pt-lg-6">
+            <div class="customer-testimonial d-flex mb-5">
+              <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                <p class="mt-2">"Das ist wichtig für uns. Mit dem Einkommen, das wir verdienen, können wir unseren Lebensunterhalt verdienen."</p>
+                <span class="h6">- Khatima <small class="ml-0 ml-md-2">( Afghanistan )</small></span>
+              </div>
+            </div>
+            <div class="customer-testimonial d-flex mb-5">
+              <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                <p class="mt-2">"Der Hunger und die Kämpfe wurden immer schlimmer und es gab absolut nichts mehr zu essen. Wir hatten keine Wahl als hierher zu kommen.
+                  Danke für Ihre Hilfe!"</p>
+                <span class="h6">- Nyepach Benyluok <small class="ml-0 ml-md-2">( Südsudan  )</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-center">
+            <a href="#" class="btn btn-primary"><span class="mr-2"><i class=""></i></span>Mehr erfahren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-primary text-white pt-3">
+    <div class="container text-md-start mt-5 ">
+      <div class="row text-center mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            help e.V.
+          </h6>
+          <p>
+            Der gemeinnützige Verein Help e.V. hat sich zum Ziel gesetzt, 
+            der Zivilgesellschaft die Möglichkeit zu geben, sich an Programmen zu beteiligen, 
+            die sowohl lokale als auch globale Probleme angehen.
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Unsere Partner
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Stadt Berlin</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Deutsches Technikmuseum</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Deutsche Oper Berlin</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Rathaus Schöneberg</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Aktuelles</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Organisation</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vereinsbüro</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Presse</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+          <p><i class="me-3"></i> Sonnenallee 54, 12045 Berlin</p>
+          <p>
+            <i class="me-3 text-secondary"></i>
+            info@helpev.de
+          </p>
+          <p><i class="me-3 text-secondary"></i> + 49 (0) 30 1233456 </p>
+          <p><i class="me-3 text-secondary"></i> + 49 (0) 1525 1234567</p>
+        </div>
+      </div>
+    </div>
+    <div class="row p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <div class="col" >
+        © 2023 help e.V.
+      </div>
+      <div class="col text-center">
+        <a href="" class="text-reset">IMPRESSUM</a> | <a href="" class="text-reset">DATENSCHUTZ</a>
+      </div>
+      <div class="col">
+      </div>
+  </div>
+  </footer>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.7.1.slim.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
